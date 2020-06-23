@@ -10,7 +10,7 @@ class Dog:
 
 class Pug(Dog):
     def runs(self):
-        print("{} runs slowly".format(self.name))
+        print("{} runs lowly".format(self.name))
 
 
 class Gsd(Dog):
