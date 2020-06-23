@@ -6,8 +6,7 @@ app = Flask(__name__)
 
 @app.route('/register')
 def register():
-    return render_template('index.html')
-
+    return render_template('/index.html')
 
 
 @app.route('/success', methods=['GET', 'POST'])
