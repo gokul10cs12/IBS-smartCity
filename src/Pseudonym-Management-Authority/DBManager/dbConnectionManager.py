@@ -1,23 +1,22 @@
-import pymongo
 from pymongo import MongoClient
 
 
-class DB(object):
+class DB:
     connector = 'mongodb://localhost:27017'
 
-    def __init__(self, dbName):
+    def __init__(self):
         self.client = MongoClient(DB.connector)
-        self.dbName = dbName
 
-    def connectUserRegister(self):
+    def connectUserRegisterDB(self, dbName):
         print(self.client.list_database_names())
-        if self.dbName in self.client.list_database_names():
-            print("db {} exist".format(self.dbName))
+        if dbName in self.client.list_database_names():
+            print("db {} exist".format(dbName))
+            return True
         else:
-            print("db {} not available".format(self.dbName))
-
+            print("db {} not available".format(dbName))
+            return False
 
 
 if __name__ == '__main__':
     db = DB("PmaMapper")
-    db.connectUserRegister()
+    print(db.connectUserRegisterDB())

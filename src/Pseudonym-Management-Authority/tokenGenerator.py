@@ -1,12 +1,15 @@
 import uuid
+from hashlib import sha256
 
 
 class TokenGenerator:
     @staticmethod
     def generateToken(formData):
+        dataCollection = {}
         formDataJSON = dict(formData)
         rand_token = uuid.uuid4()
-        # /print(rand_token)
+        integrityCheck = sha256(str(rand_token).encode('utf-8')).hexdigest()
+        dataCollection["integrity"] = integrityCheck
         formDataJSON['regToken'] = str(rand_token)
-        # print(formDataJSON)
-        return formDataJSON
+        dataCollection['formData'] = formDataJSON
+        return dataCollection
