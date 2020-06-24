@@ -3,6 +3,7 @@ class Dog:
     def __init__(self, name, age):
         self.name = name
         self.age = age
+        print("Aaa")
 
     def details(self):
         print("The dog {} has the age {}".format(self.name, self.age))

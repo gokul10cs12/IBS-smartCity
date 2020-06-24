@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, url_for
-from werkzeug.utils import redirect
+from tokenGenerator import TokenGenerator
+
 
 app = Flask(__name__)
 
@@ -13,6 +14,8 @@ def register():
 def getPost():
     render_template('index.html')
     if request.method == 'POST':
+        getRegData = TokenGenerator.generateToken(request.form)
+        print(getRegData)
         return request.form
 
 
