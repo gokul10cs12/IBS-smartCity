@@ -8,4 +8,10 @@ class RegDataManager:
 
     def saveData(self, formData):
         if self.db.connectUserRegisterDB(Generals.REG_DB):
-            print(formData)
+            self.db.checkData(formData["regToken"])
+            self.db.insertData(formData)
+
+
+if __name__ == '__main__':
+    regDataManager = RegDataManager()
+    regDataManager.saveData("save")

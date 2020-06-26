@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, url_for
 from tokenGenerator import TokenGenerator
 from regDataManager import RegDataManager
 from src.CommonVariables import Generals
+import json
 app = Flask(__name__)
 
 
@@ -18,7 +19,11 @@ def getPost():
         getRegData = TokenGenerator.generateToken(formData)
         regData = RegDataManager()
         regData.saveData(getRegData['formData'])
-        return request.form
+        # print(json.dumps(getRegData['formData']))
+        # print(json.dumps(getRegData))
+        regToken = getRegData['formData']['regToken']
+        integrity= getRegData['integrity']
+        return render_template("SuccessUser.html", token=regToken, integrity=integrity)
 
 
 if __name__ == '__main__':
