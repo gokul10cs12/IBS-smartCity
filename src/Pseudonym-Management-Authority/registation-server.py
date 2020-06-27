@@ -3,12 +3,21 @@ from tokenGenerator import TokenGenerator
 from regDataManager import RegDataManager
 from src.CommonVariables import Generals
 import json
+
 app = Flask(__name__)
 
 
 @app.route('/register')
 def register():
     return render_template('/index.html')
+
+
+@app.route('/requestPseudonym', methods=['GET', 'POST'])
+def requestPseudonym():
+    if request.method == 'POST':
+        data = request.form
+
+    return data
 
 
 @app.route('/success', methods=['GET', 'POST'])
@@ -19,10 +28,8 @@ def getPost():
         getRegData = TokenGenerator.generateToken(formData)
         regData = RegDataManager()
         regData.saveData(getRegData['formData'])
-        # print(json.dumps(getRegData['formData']))
-        # print(json.dumps(getRegData))
         regToken = getRegData['formData']['regToken']
-        integrity= getRegData['integrity']
+        integrity = getRegData['integrity']
         return render_template("SuccessUser.html", token=regToken, integrity=integrity)
 
 
