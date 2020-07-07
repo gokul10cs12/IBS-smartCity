@@ -32,11 +32,10 @@ class DB:
             print("queryResult:", queryResult)
 
             if queryResult == 0:
-                return True
-            else:
                 return False
-            # for query in queryResult:
-            #     print(query)
+            else:
+                return True
+
         else:
             print("couldn't connect to collectionsq")
 
