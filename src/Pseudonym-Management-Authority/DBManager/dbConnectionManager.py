@@ -10,10 +10,8 @@ class DB:
 
     def connectUserRegisterDB(self, dbName):
         if dbName in self.client.list_database_names():
-            # print("db {} exist".format(dbName))
             return True
         else:
-            # print("db {} not available".format(dbName))
             return False
 
     def insertData(self, formData):
@@ -26,19 +24,19 @@ class DB:
     def updateData(self, formData):
         pass
 
-    def checkData(self, regToken):
+    def checkData(self, query):
         myDb = self.client[Generals.REG_DB]
         if Generals.REG_COLLECTION in myDb.collection_names():
             myCollection = myDb[Generals.REG_COLLECTION]
-            myQuery = {"regToken": regToken}
-            queryResult = myCollection.find(myQuery)
-            for i in queryResult:
-                print(i['commonname'])
-                if i:
-                    print("True")
-                else:
-                    print("false")
+            queryResult = myCollection.find(query).limit(1).count()
+            print("queryResult:", queryResult)
+
+            if queryResult == 0:
                 return True
+            else:
+                return False
+            # for query in queryResult:
+            #     print(query)
         else:
             print("couldn't connect to collectionsq")
 

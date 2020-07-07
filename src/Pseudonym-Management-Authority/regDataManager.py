@@ -8,8 +8,13 @@ class RegDataManager:
 
     def saveData(self, formData):
         if self.db.connectUserRegisterDB(Generals.REG_DB):
-            self.db.checkData(formData["regToken"])
-            self.db.insertData(formData)
+            queryData = {"commonname": formData["commonname"]}
+            booleanCheck = self.db.checkData(queryData)
+            if booleanCheck:
+                return Generals.DB_ERROR
+            else:
+                self.db.insertData(formData)
+                return "User added"
 
 
 if __name__ == '__main__':
