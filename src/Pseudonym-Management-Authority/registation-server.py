@@ -23,8 +23,8 @@ def requestPseudonym():
     response = {}
     if request.method == 'POST':
         token = request.json
-        existCheck = regData.verifyToken(token['regToken'])
-        if existCheck:
+        existBol = regData.verifyToken(token['regToken'])
+        if existBol:
             response['pseudonym'] = PseudonymGenerator.generatePseudonym()
             response['status'] = 'success'
             response['regToken'] = token['regToken']
