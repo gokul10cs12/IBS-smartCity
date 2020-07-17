@@ -12,7 +12,7 @@ Rerequired packages and Libraries:
 - pycocks
 - flask
 - pymongo
-- gmpy2
+- gmpy2 - only works well with Linux, (failed in windows 10)
 ## usage
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install required package or else use pycharm itself for the venv.
