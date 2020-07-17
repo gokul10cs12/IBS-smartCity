@@ -7,30 +7,33 @@ This project uses flask framework - a micro webframework(python) for the backend
 Used HTML5 for webpages, no other specific front libraries have used. Only static web pages are present.
 ## Installation
 Rerequired packages and Libraries:
-Recommended IDE : Pycharm - enables virtual environment (venv)
-Python version - 3.X
-pycocks
-flask
-pymongo
-gmpy2
+- Recommended IDE : Pycharm - enables virtual environment (venv)
+- Python version - 3.x
+- pycocks
+- flask
+- pymongo
+- gmpy2
 ##usage
-pip install <package_name>
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install required package or else use pycharm itself for the venv.
 
 ```bash
-pip install foobar
+pip install <package_name>
 ```
+##Pre-requisites
+- Install mongoDB and MondoDBCompass.
+- Create DB named PmaMapper.
+- Create 2 collections Pkg_List, user_register.
+- The MondoDB service should be up and running.
+## Steps running the code
 
-## Usage
+1. Open the project in an IDE(VsCode/ Pycharm) 
+2. Install the necessary packages.
+3. Open registation-server.py under Pseudonym-Management-Authority directory.
+4. Run the program.
+5.
 
-```python
-import foobar
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
