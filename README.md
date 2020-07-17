@@ -13,7 +13,7 @@ Rerequired packages and Libraries:
 - flask
 - pymongo
 - gmpy2
-##usage
+## usage
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install required package or else use pycharm itself for the venv.
 
@@ -25,14 +25,18 @@ pip install <package_name>
 - Create DB named PmaMapper.
 - Create 2 collections Pkg_List, user_register.
 - The MondoDB service should be up and running.
+- Use the tool Post man, to get the request transition.
+
 ## Steps running the code
 
 1. Open the project in an IDE(VsCode/ Pycharm) 
 2. Install the necessary packages.
 3. Open registation-server.py under Pseudonym-Management-Authority directory.
 4. Run the program.
-5.
+5. Hit the url: http://localhost:5000/register , if the html registration page showed up , the server is up and running successfully.
 
+- user registration: http://localhost:5000/register
+- pesudonym generation request:  http://localhost:5000/requestPseudonym - hit with Post Man.
 
 
 ## Contributing
