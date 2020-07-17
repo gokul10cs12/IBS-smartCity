@@ -37,7 +37,7 @@ class DB:
                 return True
 
         else:
-            print("couldn't connect to collectionsq")
+            print("couldn't connect to collections")
 
 
 if __name__ == '__main__':
