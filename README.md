@@ -1,5 +1,5 @@
 # IBS-smartCity
-# Project Description
+## Project Description
 
 This is project on implmenting ID-based security framework for smart cities. 
 Architecture file can be found in root directory highlevel_idc_smartcity.pdf
