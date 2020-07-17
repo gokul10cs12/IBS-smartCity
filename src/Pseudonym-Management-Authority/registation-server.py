@@ -1,11 +1,10 @@
 import json
 
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, jsonify
 from tokenGenerator import TokenGenerator
 from regDataManager import RegDataManager
 from pseudonymGenerator import PseudonymGenerator
 
-import random
 from src.CommonVariables import Generals
 
 app = Flask(__name__)
@@ -28,14 +27,14 @@ def requestPseudonym():
             response['pseudonym'] = PseudonymGenerator.generatePseudonym()
             response['status'] = 'success'
             response['regToken'] = token['regToken']
-            return response
+            return jsonify(response), 200
         else:
             response['status'] = "Authentication Failed"
-            return response
+            return jsonify(response), 200
 
 
 @app.route('/success', methods=['GET', 'POST'])
-def getPost():
+def registerUser():
     if request.method == 'POST':
         formData = request.form
         getRegData = TokenGenerator.generateToken(formData)
@@ -45,7 +44,6 @@ def getPost():
         else:
             regToken = getRegData['formData']['regToken']
             integrity = getRegData['integrity']
-
             return render_template("SuccessUser.html", token=regToken, integrity=integrity)
 
 
