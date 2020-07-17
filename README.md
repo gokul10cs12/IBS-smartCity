@@ -20,7 +20,7 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install require
 ```bash
 pip install <package_name>
 ```
-##Pre-requisites
+## Pre-requisites
 - Install mongoDB and MondoDBCompass.
 - Create DB named PmaMapper.
 - Create 2 collections Pkg_List, user_register.
