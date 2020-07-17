@@ -1,6 +1,7 @@
 from src.CommonVariables import Generals
 from DBManager.dbConnectionManager import DB
 
+
 class RegDataManager:
     def __init__(self):
         self.db = DB()

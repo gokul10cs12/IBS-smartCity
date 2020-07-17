@@ -1,10 +1,8 @@
-import json
-
 import requests
-from flask import Flask, render_template, request, jsonify, make_response
+from flask import Flask, request
 from src.CommonVariables import Generals
-app = Flask(__name__)
 
+app = Flask(__name__)
 
 
 @app.route('/requestCertificate', methods=['GET', 'POST'])

@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 from src.CommonVariables import Generals
-import json
+
 
 class DB:
     connector = 'mongodb://localhost:27017'
