@@ -29,8 +29,8 @@ pip install <package_name>
 
 ## Steps running the code
 
-1. Open the project in an IDE(VsCode/ Pycharm) 
-2. Install the necessary packages.
+1. Install the necessary packages.
+2. Open the project in an IDE(VsCode/ Pycharm) 
 3. Open registation-server.py under Pseudonym-Management-Authority directory.
 4. Run the program.
 5. Hit the url: http://localhost:5000/register , if the html registration page showed up , the server is up and running successfully.
