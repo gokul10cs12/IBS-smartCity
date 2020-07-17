@@ -4,7 +4,7 @@
 This is project on implmenting ID-based security framework for smart cities. 
 Architecture file can be found in root directory highlevel_idc_smartcity.pdf
 This project uses flask framework - a micro webframework(python) for the backend, it also uses MongoDB as DB.
-Used HTML5 for webpages, no other specific front libraries have used. Only static web pages are present.
+Used HTML5 for webpages, no other specific frontend libraries/frameworks have used. Only static web pages are present.
 ## Installation
 Rerequired packages and Libraries:
 - Recommended IDE : Pycharm - enables virtual environment (venv)
@@ -37,6 +37,12 @@ pip install <package_name>
 
 - user registration: http://localhost:5000/register
 - pesudonym generation request:  http://localhost:5000/requestPseudonym - hit with Post Man.
+Hit the requestPeudonym url with available registration token as the body using POST method in Postman tool given below:
+```json
+{
+    "regToken" : "52e27990-339a-4773-a56e-17ss329bbbd3b6"
+}
+````
 
 
 ## Contributing
