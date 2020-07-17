@@ -25,7 +25,7 @@ pip install <package_name>
 - Create DB named PmaMapper.
 - Create 2 collections Pkg_List, user_register.
 - The MondoDB service should be up and running.
-- Use the tool Post man, to get the request transition.
+- Use the tool Post man canary, to test API.
 
 ## Steps running the code
 
