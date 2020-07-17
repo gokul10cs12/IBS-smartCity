@@ -1,9 +1,20 @@
 # IBS-smartCity
-# Foobar
+# Project Description
 
-Foobar is a Python library for dealing with word pluralization.
-
+This is project on implmenting ID-based security framework for smart cities. 
+Architecture file can be found in root directory highlevel_idc_smartcity.pdf
+This project uses flask framework - a micro webframework(python) for the backend, it also uses MongoDB as DB.
+Used HTML5 for webpages, no other specific front libraries have used. Only static web pages are present.
 ## Installation
+Rerequired packages and Libraries:
+Recommended IDE : Pycharm - enables virtual environment (venv)
+Python version - 3.X
+pycocks
+flask
+pymongo
+gmpy2
+##usage
+pip install <package_name>
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
